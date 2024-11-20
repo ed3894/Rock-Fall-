@@ -1,5 +1,4 @@
 # Overview
-
 ## Title
 Embedded Rockfall Detection System Using TinyML with Real-Time, 3-Component Accelerometer and Gyroscope Data 
 
@@ -13,45 +12,80 @@ Embedded Rockfall Detection System Using TinyML with Real-Time, 3-Component Acce
 This project focuses on developing a lightweight, embedded system for real-time rockfall detection using an Arduino 33 BLE sensor equipped with a TinyML shield. A three-axis accelerometer and gyroscope were used to record vibrations caused by simulated rockfalls in a soil-filled bin inclined at 45°. The dataset consisted of 100 rockfall events and 100 background noise events, each sampled for 1.5 seconds at 100 Hz. An 80/20 training/testing split was applied, and spectral features were extracted using FFT preprocessing. A neural network with a 78-feature input layer, two dense layers (20 and 10 neurons), and a binary output layer was trained and tested, achieving an accuracy of 96.67% on the testing data. The model was deployed to the Arduino board, housed in a custom 3D-printed enclosure. A red LED flashes when rockfall events are detected, showcasing a real-time implementation of the model. Future work includes field validation, expanding datasets, and testing in varied environmental conditions for improved robustness and applicability.
 
 ## Introduction
+An overview of the hardware, what it does, how it was produced, and the research for which it has been used. If the hardware addresses a specific lack or problem, describe the problem in this section and how the hardware addresses the problem. Elaborate how it technically/methodologically advances the state-of-the-art including references to relevant research articles and online references. 
 
 ## Overall Implementation and Design
+Describe how the hardware was implemented/created, with relevant details of the architecture and design, including general materials (Note: specific details on materials can be addressed in later section “Availability of materials and methods”). The use of diagrams and pictures of the assembled hardware is appropriate. Please also describe any variants and associated implementation differences. 
+
+Note: This is not meant to be an assembly instruction. Assembly instructions, detailed material lists, and construction files must be deposited in an appropriate repository (see Repositories document) and referenced in the section “Build Details”. 
 
 # Quality Control
-
 ## Safety
+Describe all relevant safety issues or references to a risk assessment if included in the hardware documentation (For example high voltage, chemical safety etc.). If appropriate, discuss the wider context of the use of the hardware and safety issues or risks that may arise in the use environment. 
 
 ## Calibration
+If the hardware is used for measurements, please detail here how the reliability of measurements, or other hardware properties that are relevant for measurements, has been quantified and explain the results. Be clear about the processes or procedures used to compare the hardware to a standard, as well as the description of the standard calibrated against. 
+
+Detail the general procedures in place for users to calibrate their hardware before or during use. What methods can be used to relate user-generated data to data from other sources?  
+
+Note: Detailed instructions belong in documentation; here, provide insight into how and why the calibration is valid. 
 
 ## General Testing
+In this section, details can be provided on the testing of hardware functionalities, that are not directly essential for the precision operation of the hardware in the given context (which are in turn, where applicable, handled under Calibration), such as automated movements to position the hardware, repeatability of tool exchanges, recyclability, water-tightness, weight or other possibly relevant characteristics. We encourage the authors to characterise all appropriate functionalities of the hardware, if not already described elsewhere (add reference instead). The testing should define the safe/reliable limits in which the components can be operated (e.g. step size and repeatability of linear motion, force ranges, ratio of devices with leaks when built in a workshop, etc). This will enhance the usability of the hardware or method in other contexts. 
+
+Again: Detailed instructions belong in documentation; here, provide a summary  instead. 
 
 # Application
-
 ## Use Cases
+Describe at least one example of an application of your hardware. This should include some evidence of output, e.g. data produced by the use of the device or a picture of other types of results. Outline how the quality control in the previous section enables the use of the hardware in this context. We encourage the inclusion of experiment results or the reference to a publication (published or to be published) where these results are detailed. We also encourage pointers to ongoing work. 
+
+Note: In the spirit of openness, we require authors to provide (or link to) datasets along with the submitted graphic representations. We do not impose arbitrary limits on the inclusion of data so please include sufficient empirical detail and results to ensure your data can be easily verified, analysed and clearly interpreted by the wider scientific community. 
 
 # Build Details
-
 ## Availability of Materials and Methods
-[TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi)
+Summarise what materials have been used to construct the hardware and what methods to process the materials as well as the assembly. Provide more details or references where important materials or methods are non-standard, not globally available, or produced only by one manufacturer. 
 
+[TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi)
+[Edge Impulse Project](https://studio.edgeimpulse.com/public/560569/live)
 
 ## Ease of Build / Design Decision
+Have any measures been taken in the design to make the hardware easy to build for other users e.g. reduction of parts, features in the design to make the hardware assembly more reliable? 
+
+What were the decisions made in designing this hardware? Were other designs/options tried? please describe also what did not work. 
 
 ## Operating Software and Peripherals
+If hardware requires software, details on the operating software and programming language - Please include minimum version compatibility. Additional system requirements, e.g. memory, disk space, processor, input or output devices. 
+
+If the hardware does not require software, detail any required supporting processes or protocols required for use.  
 
 ## Dependencies
+E.g. other hardware or software projects, modular components, libraries, frameworks, incl. minimum version compatibility. Explicitly state if dependencies are proprietary / closed source. 
 
 ## Hardware Documentation / Build Instructions / Files Location
+For the assessment of the article, these repositories can be modifiable, for example, on GitHub or GitLab. Once the article has been accepted, these repositories must be moved in a preservation and immutable repository, for example, Zenodo.  
+
+Name: The name of the archive 
+Persistent identifier: e.g. DOI, etc. 
+Publisher: Name of the person who deposited the documentation 
+Date published: yyyy-mm-dd 
 
 # Discussion
-
 ## Conclusions
+Conclusions, learned lessons from design iterations, learned lessons from use cases, a summary of results. 
 
 ## Future Work
+Further work pursued by the authors or collaborators; known issues; suggestions for others to improve on the hardware design or testing,, given what you have learned from your design iterations. 
 
 ## Author Contributions
+Task (e.g. design, assembly, use cases contribution, documentation, paper writing), contribution, author name. 
 
 ## Acknowledgments
+Please add any relevant acknowledgments to anyone else who supported the project in which the hardware was created, but did not work directly on the hardware itself. 
+
+Please list anyone who helped to create the hardware and software (who may also not be an author of this paper), including their roles and affiliations. 
 
 ## References
+Please enter references in the Vancouver style and include a DOI where available, citing them in the text with a number in square brackets, e.g. 
 
+[1] Piwowar, H A 2011 Who Shares? Who Doesn't? Factors Associated with Openly Archiving Raw Research Data. PLoS ONE 6(7): e18657. DOI: http://dx.doi.org/10.1371/journal.pone.0018657. 
 
