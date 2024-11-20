@@ -30,7 +30,7 @@ Describe how the hardware was implemented/created, with relevant details of the 
 
 Note: This is not meant to be an assembly instruction. Assembly instructions, detailed material lists, and construction files must be deposited in an appropriate repository (see Repositories document) and referenced in the section “Build Details”. 
 
-# Quality Control
+# 2. Quality Control
 ## Safety
 Describe all relevant safety issues or references to a risk assessment if included in the hardware documentation (For example high voltage, chemical safety etc.). If appropriate, discuss the wider context of the use of the hardware and safety issues or risks that may arise in the use environment. 
 
@@ -46,13 +46,13 @@ In this section, details can be provided on the testing of hardware functionalit
 
 Again: Detailed instructions belong in documentation; here, provide a summary  instead. 
 
-# Application
+# 3. Application
 ## Use Cases
 Describe at least one example of an application of your hardware. This should include some evidence of output, e.g. data produced by the use of the device or a picture of other types of results. Outline how the quality control in the previous section enables the use of the hardware in this context. We encourage the inclusion of experiment results or the reference to a publication (published or to be published) where these results are detailed. We also encourage pointers to ongoing work. 
 
 Note: In the spirit of openness, we require authors to provide (or link to) datasets along with the submitted graphic representations. We do not impose arbitrary limits on the inclusion of data so please include sufficient empirical detail and results to ensure your data can be easily verified, analysed and clearly interpreted by the wider scientific community. 
 
-# Build Details
+# 4. Build Details
 ## Availability of Materials and Methods
 The hardware for this project was constructed using an [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board integrated with the [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi), tailored for embedded machine learning applications. The shield's built-in accelerometer and gyroscope were utilized to capture motion and vibration data, which are essential for detecting rockfall events. A custom enclosure was designed and produced using a [Formlabs 3+](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOoogctzvkMCPNXJxEQaeboXhmlPcaZkhTJMcOLzRIGzMOPJLnxxH) printer with [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/), providing a durable and precise housing for the components. This resin is ideal for high-resolution, rapid prototyping applications, ensuring the enclosure meets the project's requirements for robustness and accuracy.
 
@@ -79,7 +79,7 @@ Persistent identifier: e.g. DOI, etc.
 Publisher: Name of the person who deposited the documentation 
 Date published: yyyy-mm-dd 
 
-# Discussion
+# 5. Discussion
 ## Conclusions
 Conclusions, learned lessons from design iterations, learned lessons from use cases, a summary of results. 
 
