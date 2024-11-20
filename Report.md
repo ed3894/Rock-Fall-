@@ -1,6 +1,3 @@
-
-
-
 # Overview
 
 ## Title
@@ -13,7 +10,7 @@ Embedded Rockfall Detection System Using TinyML with Real-Time, 3-Component Acce
 
 ## Abstract
 
-This project explores the development of a lightweight, embedded system for real-time rockfall detection using an Arduino 33 BLE sensor equipped with a TinyML shield. A three-axis accelerometer and gyroscope were utilized to record vibrations caused by rocks rolling down a slope simulated in a soil-filled bin. The experimental setup involved rolling rocks in varying quantities and positions, alongside background noise recordings, resulting in 200 labeled samples of 1.5 seconds at 100 Hz. Data preprocessing was performed using spectral features (FFT) and processed through a neural network in Edge Impulse. The network architecture consisted of a 78-feature input layer, two dense layers (20 and 10 neurons), and a binary output layer to classify rockfall events versus background noise. Initial results demonstrate the system's ability to distinguish rockfall activity under controlled conditions. Future improvements include expanding the dataset with varied terrain and environmental noise, optimizing model parameters, and field validation to enhance real-world applicability.
+This project focuses on developing a lightweight, embedded system for real-time rockfall detection using an Arduino 33 BLE sensor equipped with a TinyML shield. A three-axis accelerometer and gyroscope were used to record vibrations caused by simulated rockfalls in a soil-filled bin inclined at 45°. The dataset consisted of 100 rockfall events and 100 background noise events, each sampled for 1.5 seconds at 100 Hz. An 80/20 training/testing split was applied, and spectral features were extracted using FFT preprocessing. A neural network with a 78-feature input layer, two dense layers (20 and 10 neurons), and a binary output layer was trained and tested, achieving an accuracy of 96.67% on the testing data. The model was deployed to the Arduino board, housed in a custom 3D-printed enclosure. A red LED flashes when rockfall events are detected, showcasing a real-time implementation of the model. Future work includes field validation, expanding datasets, and testing in varied environmental conditions for improved robustness and applicability.
 
 ## Introduction
 
