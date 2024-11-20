@@ -31,6 +31,8 @@ This project focuses on developing a lightweight, embedded system for real-time 
 # Build Details
 
 ## Availability of Materials and Methods
+[TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi)
+
 
 ## Ease of Build / Design Decision
 
