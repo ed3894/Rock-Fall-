@@ -76,16 +76,15 @@ The assembly involved securely mounting the [Arduino Nano 33 BLE](https://store-
 
 While the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) are widely available through global distributors, the use of a Formlabs 3+ printer with proprietary  [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/) provides a specialized solution for creating high-quality enclosures. These materials and methods are suitable for replicable construction but may require access to advanced 3D printing facilities. The use of only accelerometer and gyroscope data focuses the hardware's functionality on motion-related metrics, aligning with the project’s specific objectives.
 
-## Ease of Build / Design Decision
-Have any measures been taken in the design to make the hardware easy to build for other users e.g. reduction of parts, features in the design to make the hardware assembly more reliable? 
-What were the decisions made in designing this hardware? Were other designs/options tried? please describe also what did not work. 
+## Ease of Build / Design Decision 
+The system is designed for ease of assembly, utilizing off-the-shelf components and open-source software tools. Design decisions focus on minimizing cost and power consumption while ensuring reliable detection capabilities. 
 
 ## Operating Software and Peripherals
 If hardware requires software, details on the operating software and programming language - Please include minimum version compatibility. Additional system requirements, e.g. memory, disk space, processor, input or output devices. 
 If the hardware does not require software, detail any required supporting processes or protocols required for use.  
 
 ## Dependencies
-E.g. other hardware or software projects, modular components, libraries, frameworks, incl. minimum version compatibility. Explicitly state if dependencies are proprietary / closed source. 
+The system relies on the Arduino development environment and libraries for sensor interfacing, as well as machine learning frameworks like TensorFlow Lite for model deployment. All dependencies are open-source and compatible with the hardware components used.
 
 ## Hardware Documentation / Build Instructions / Files Location
 For the assessment of the article, these repositories can be modifiable, for example, on GitHub or GitLab. Once the article has been accepted, these repositories must be moved in a preservation and immutable repository, for example, Zenodo.  
@@ -97,10 +96,10 @@ Date published: yyyy-mm-dd
 
 # 5. Discussion
 ## Conclusions
-Conclusions, learned lessons from design iterations, learned lessons from use cases, a summary of results. 
+The embedded rockfall detection system demonstrates the feasibility of using TinyML for real-time monitoring of geological hazards. Its cost-effectiveness and scalability make it a viable solution for deployment in various high-risk areas.
 
 ## Future Work
-Further work pursued by the authors or collaborators; known issues; suggestions for others to improve on the hardware design or testing,, given what you have learned from your design iterations. 
+Future developments include testing the system with different materials and variables in the lab, determining the optimal number of sensors required over a given area, and conducting extensive field applications to demonstrate the method's effectiveness. Implementations in high-risk zones, for example along the I-70 corridor, incorporating solar panels and road signs with flashing lights for real-time alerts.
 
 ## Author Contributions
 Task (e.g. design, assembly, use cases contribution, documentation, paper writing), contribution, author name. 
