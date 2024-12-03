@@ -29,9 +29,19 @@ Recent advancements in machine learning, particularly the use of Tiny Machine Le
 
 
 ## Overall Implementation and Design
-Describe how the hardware was implemented/created, with relevant details of the architecture and design, including general materials (Note: specific details on materials can be addressed in later section “Availability of materials and methods”). The use of diagrams and pictures of the assembled hardware is appropriate. Please also describe any variants and associated implementation differences. 
+The proposed rockfall detection system utilizes the Arduino Nano 33 BLE Sense board, equipped with a 9-axis inertial measurement unit (IMU) comprising a 3D accelerometer, 3D gyroscope, and 3D magnetometer. The IMU captures motion data across three axes, which is processed using TinyML models deployed on the microcontroller. The system is designed to detect specific motion patterns indicative of rockfall events.
 
-Note: This is not meant to be an assembly instruction. Assembly instructions, detailed material lists, and construction files must be deposited in an appropriate repository (see Repositories document) and referenced in the section “Build Details”. 
+Hardware Components:
+•	Microcontroller: Arduino Nano 33 BLE Sense
+•	Sensors: Onboard 9-axis IMU (accelerometer, gyroscope, magnetometer)
+•	Power Supply: Rechargeable battery pack
+•	Communication Module: Bluetooth Low Energy (BLE) for data transmission
+
+Software Components:
+•	Data Collection: Utilizing Arduino libraries to interface with IMU sensors
+•	Model Training: Data collected is used to train machine learning models on platforms like Edge Impulse
+•	Model Deployment: Trained models are converted to TensorFlow Lite format and deployed on the microcontroller
+•	Real-Time Inference: The microcontroller processes incoming sensor data to detect rockfall events
 
 # 2. Quality Control
 ## Safety
