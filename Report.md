@@ -31,7 +31,7 @@ Recent advancements in machine learning, particularly the use of Tiny Machine Le
 ## Overall Implementation and Design
 The proposed rockfall detection system utilizes the Arduino Nano 33 BLE Sense board, equipped with a 9-axis inertial measurement unit (IMU) comprising a 3D accelerometer, 3D gyroscope, and 3D magnetometer. The IMU captures motion data across three axes, which is processed using TinyML models deployed on the microcontroller. The system is designed to detect specific motion patterns indicative of rockfall events.
 
-![Alt Text](images/final_design.jpg)
+![Alt Text](images/exp_setup.jpg)
 *Figure 1: Formlabs 3+ Printer used for the project.*
 
 Hardware Components:
