@@ -11,20 +11,21 @@
 This project focuses on developing a lightweight, embedded system for real-time rockfall detection using an Arduino 33 BLE sensor equipped with a TinyML shield. A three-axis accelerometer and gyroscope were used to record vibrations caused by simulated rockfalls in a soil-filled bin inclined at 45°. The dataset consisted of 100 rockfall events and 100 background noise events, each sampled for 1.5 seconds at 100 Hz. An 80/20 training/testing split was applied, and spectral features were extracted using FFT preprocessing. A neural network with a 78-feature input layer, two dense layers (20 and 10 neurons), and a binary output layer was trained and tested, achieving an accuracy of 96.67% on the testing data. The model was deployed to the Arduino board, housed in a custom 3D-printed enclosure. A red LED flashes when rockfall events are detected, showcasing a real-time implementation of the model. Future work includes field validation, expanding datasets, and testing in varied environmental conditions for improved robustness and applicability.
 
 ## Metadata Overview
+
+**Main Design Files**:  
 - [Arduino Library](Code/rockfallmodelinferencing.zip)
-
 - [Arduino Code](Code/rockfull_with_airetLED_external.ino)
-
 - [CAD Files](CAD_Files)
-
 - [Formlabs Files](Preform_Design)
 
-Please provide the following overview and self-assessment 
-Main design files: link to repository with design files and assembly instructions 
-Target group: e.g. secondary school students, layperson, undergraduate students, scientists in [discipline], trained engineers, use of professional services 
-Skills required: For each main manufacturing method, provide information pairs (method - easy / advanced / specialist). E.g. desktop 3d printing - easy; surface mount PCB - advanced; injection moulding - specialist 
-Replication: Project has been replicated at time of publication? Include reference (possibly way of contact). Links to places where future builds and kits might be found (repository, group website, collaboration site, etc.). 
-See section “Build Details” for more detail. 
+**Target Group**:  
+This project is suitable for individuals with intermediate to advanced technical backgrounds, such as undergraduate students, scientists, or engineers with experience in digital signal processing and machine learning. It may also interest hobbyists with strong programming and electronics skills.
+
+**Skills Required**:
+- **3D Printing**: *Easy* – The enclosure can be printed using a desktop 3D printer (e.g., Formlabs 3+ with Draft V2 photopolymer resin) with minimal setup and post-processing required.
+- **Arduino Code Implementation**: *Easy* – Running pre-written code on the Arduino Nano 33 BLE is straightforward for anyone familiar with Arduino IDE.
+- **Data Collection and Processing**: *Advanced* – Requires specialized knowledge in digital signal processing and machine learning, particularly in working with neural networks and using platforms like Edge Impulse to train and deploy models.
+- **Hardware Assembly**: *Easy* – Involves simple assembly steps such as securing components in a 3D-printed enclosure and connecting sensors with pre-soldered headers.
 
 ## Keywords
 TinyML; Rockfall Detection; Accelerometer; Edge Impulse; Real-Time Monitoring
