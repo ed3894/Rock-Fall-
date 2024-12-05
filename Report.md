@@ -99,20 +99,23 @@ If the hardware does not require software, detail any required supporting proces
 The system relies on the Arduino development environment and libraries for sensor interfacing, as well as machine learning frameworks like TensorFlow Lite for model deployment. All dependencies are open-source and compatible with the hardware components used.
 
 ## Hardware Documentation / Build Instructions / Files Location
-The hardware for this project was constructed using an [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board integrated with the [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi), tailored for embedded machine learning applications. The [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)  built-in accelerometer and gyroscope were utilized to capture motion and vibration data, which are essential for detecting rockfall events. A custom enclosure was designed and produced using a [Formlabs 3+](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOoogctzvkMCPNXJxEQaeboXhmlPcaZkhTJMcOLzRIGzMOPJLnxxH) printer with [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/), providing a durable and precise housing for the components. This resin is ideal for high-resolution, rapid prototyping applications, ensuring the enclosure meets the project's requirements for robustness and accuracy.
+
+The hardware for this project was constructed using an [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board and a [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi). A custom enclosure was designed using CAD software and 3D printed with a [Formlabs 3+](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOoogctzvkMCPNXJxEQaeboXhmlPcaZkhTJMcOLzRIGzMOPJLnxxH) printer using [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/). This process involved slicing the CAD design for high-resolution rapid prototyping and ensuring the final print provided a precise fit for the components.
 
 ![Alt Text](Images/topprint.jpg)
 *Figure x: 3D Printed Top Piece*
 
-The assembly involved securely mounting the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) within the 3D-printed enclosure using standard screws. The electrical connections between components were established through pre-soldered headers, simplifying the process while ensuring a reliable setup. The enclosure was specifically designed using CAD software to ensure a precise fit for the hardware, accommodating the dynamic testing conditions of the project.
+To assemble the hardware:
+1. **Print the Enclosure**: Use the provided CAD files to 3D print the enclosure. Ensure the dimensions align with the specified 4x2.5x1.125 inches.
+- [CAD Files](CAD_Files)
+- [Formlabs Files](Preform_Design)
+2. **Prepare the Components**: Gather the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board and the [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi).
+3. **Mount the Arduino and Shield**: Secure the TinyML Shield to the Arduino Nano 33 BLE board using pre-soldered headers to establish a reliable electrical connection.
+4. **Attach Components to the Enclosure**: Place the board and shield assembly into the 3D-printed enclosure and fix it in place using standard screws. Ensure the components are tightly secured to prevent movement during operation.
+5. **Seal the Enclosure (Optional)**: If operating in environments with potential moisture or dust, seal the openings of the enclosure with silicone or another sealing material. For testing, a thin plastic bag was used to protect the hardware from dirt and moisture.
 
 ![Alt Text](Images/basefinal.jpg)
 *Figure x: TinyML Shield Bolted Onto 3D Printed Base*
-
-Name: The name of the archive 
-Persistent identifier: e.g. DOI, etc. 
-Publisher: Name of the person who deposited the documentation 
-Date published: yyyy-mm-dd 
 
 # 5. Discussion
 ## Conclusions
