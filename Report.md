@@ -16,7 +16,7 @@ This project focuses on developing a lightweight, embedded system for real-time 
 
 - [Arduino Code](Code/rockfull_with_airetLED_external.ino)
 
-- [CAD Files](Code/rockfull_with_airetLED_external.ino)
+- [CAD Files](Enclosure for EdX_HarvardX Tiny Machine Learning course Arduino Shield - 4781238)
 
 - [Formlabs Files](Code/rockfull_with_airetLED_external.ino)
 
