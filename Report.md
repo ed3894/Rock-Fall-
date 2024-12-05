@@ -74,6 +74,9 @@ Again: Detailed instructions belong in documentation; here, provide a summary  i
 
 ADD A LINK TO THE EDGE IMPULSE AND TALK ABOUT DATA COLLECTION. 
 
+![Alt Text](Images/setup.jpg)
+*Figure x: Experimental Setup*
+
 Describe at least one example of an application of your hardware. This should include some evidence of output, e.g. data produced by the use of the device or a picture of other types of results. Outline how the quality control in the previous section enables the use of the hardware in this context. We encourage the inclusion of experiment results or the reference to a publication (published or to be published) where these results are detailed. We also encourage pointers to ongoing work. 
 
 Note: In the spirit of openness, we require authors to provide (or link to) datasets along with the submitted graphic representations. We do not impose arbitrary limits on the inclusion of data so please include sufficient empirical detail and results to ensure your data can be easily verified, analysed and clearly interpreted by the wider scientific community. 
