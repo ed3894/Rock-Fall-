@@ -40,6 +40,9 @@ Hardware Components:
 •	Power Supply: Rechargeable battery pack
 •	Communication Module: Bluetooth Low Energy (BLE) for data transmission
 
+![Alt Text](Images/arduino.jpg)
+*Figure x: Arduino 33 BLE Sense Board*
+
 Software Components:
 •	Data Collection: Utilizing Arduino libraries to interface with IMU sensors
 •	Model Training: Data collected is used to train machine learning models on platforms like Edge Impulse
