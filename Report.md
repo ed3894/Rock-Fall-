@@ -59,15 +59,14 @@ Software Components:
 
 # 2. Quality Control
 ## Safety
-There are no significant safety risks with this project. The highest voltages produced by the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board are 3 V. The only potential risk is the size of the rockfalls you are simulating. Our rock fall experiments had a very small scale, so this was not a risk. 
+This project poses no significant safety risks. The [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board operates at a maximum voltage of 3 V. The only potential concern is the scale of the simulated rockfalls. However, our rockfall experiments were conducted on a very small scale, mitigating this risk.
 
 ## Calibration
-
+The reliability of measurements in this hardware setup depends on proper coupling between the TinyML Shield and the soil. To ensure accurate wave transmission from rockfalls to the accelerometer and gyroscope, the shield must be buried securely, with the soil packed firmly around it. Adding a small amount of water can further enhance soil compaction and improve signal transmission. Users are advised to test different burial depths, shield locations, soil packing methods, and moisture levels to optimize data quality before beginning actual data collection. Edge Impulse enables rapid data visualization, allowing users to evaluate these adjustments efficiently.
 
 ## General Testing
-In this section, details can be provided on the testing of hardware functionalities, that are not directly essential for the precision operation of the hardware in the given context (which are in turn, where applicable, handled under Calibration), such as automated movements to position the hardware, repeatability of tool exchanges, recyclability, water-tightness, weight or other possibly relevant characteristics. We encourage the authors to characterise all appropriate functionalities of the hardware, if not already described elsewhere (add reference instead). The testing should define the safe/reliable limits in which the components can be operated (e.g. step size and repeatability of linear motion, force ranges, ratio of devices with leaks when built in a workshop, etc). This will enhance the usability of the hardware or method in other contexts. 
+The final hardware design measures 4x2.5x1.125 inches, housing an Arduino Nano 33 BLE board that is compact at only 2x0.5x0.5 inches. While the enclosure is functional, it is not inherently water-tight unless the openings in the 3D-printed case are sealed. To protect the design during testing, a thin plastic bag was placed around the entire assembly before burial, preventing moisture and dirt contamination. For real-world applications, this design would need to be upgraded with a fully sealed and water-tight enclosure to ensure durability in harsh conditions. Additionally, the current enclosure may be vulnerable to damage from larger rocks, which could crush critical components. To address this, a sturdier container would be required in practical implementations to withstand high-impact forces and maintain the integrity of the hardware.
 
-Again: Detailed instructions belong in documentation; here, provide a summary  instead. 
 
 # 3. Application
 ## Use Cases
