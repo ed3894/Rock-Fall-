@@ -35,10 +35,11 @@ The proposed rockfall detection system utilizes the Arduino Nano 33 BLE Sense bo
 *Figure x: Final Design*
 
 Hardware Components:
-•	Microcontroller: Arduino Nano 33 BLE Sense
-•	Sensors: Onboard 9-axis IMU (accelerometer, gyroscope, magnetometer)
-•	Power Supply: Rechargeable battery pack
-•	Communication Module: Bluetooth Low Energy (BLE) for data transmission
+- **Microcontroller**: Arduino Nano 33 BLE Sense
+- **Sensors**: Onboard 9-axis IMU (accelerometer, gyroscope, magnetometer)
+- **Power Supply**: Rechargeable battery pack
+- **Communication Module**: Bluetooth Low Energy (BLE) for data transmission
+
 
 ![Alt Text](Images/arduino.jpg)
 *Figure x: Arduino 33 BLE Sense Board*
