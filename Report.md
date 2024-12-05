@@ -18,7 +18,7 @@ This project focuses on developing a lightweight, embedded system for real-time 
 
 - [CAD Files](CAD_Files)
 
-- [Formlabs Files](Code/rockfull_with_airetLED_external.ino)
+- [Formlabs Files](Preform_Design)
 
 Please provide the following overview and self-assessment 
 Main design files: link to repository with design files and assembly instructions 
