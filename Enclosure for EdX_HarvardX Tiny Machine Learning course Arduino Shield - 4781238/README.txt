@@ -1,1 +1,0 @@
-Enclosure for EdX/HarvardX Tiny Machine Learning course Arduino Shield by MicroSource on Thingiverse: https://www.thingiverse.com/thing:4781238
