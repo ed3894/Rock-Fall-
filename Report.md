@@ -12,8 +12,13 @@ Embedded Rockfall Detection System Using TinyML with Real-Time, 3-Component Acce
 This project focuses on developing a lightweight, embedded system for real-time rockfall detection using an Arduino 33 BLE sensor equipped with a TinyML shield. A three-axis accelerometer and gyroscope were used to record vibrations caused by simulated rockfalls in a soil-filled bin inclined at 45°. The dataset consisted of 100 rockfall events and 100 background noise events, each sampled for 1.5 seconds at 100 Hz. An 80/20 training/testing split was applied, and spectral features were extracted using FFT preprocessing. A neural network with a 78-feature input layer, two dense layers (20 and 10 neurons), and a binary output layer was trained and tested, achieving an accuracy of 96.67% on the testing data. The model was deployed to the Arduino board, housed in a custom 3D-printed enclosure. A red LED flashes when rockfall events are detected, showcasing a real-time implementation of the model. Future work includes field validation, expanding datasets, and testing in varied environmental conditions for improved robustness and applicability.
 
 ## Metadata Overview
-[Link Text](Code/rockfallmodelinferencing.zip)
-[Link Text](Code/rockfull_with_airetLED_external.ino)
+- [Arduino Library](Code/rockfallmodelinferencing.zip)
+
+- [Arduino Code](Code/rockfull_with_airetLED_external.ino)
+
+- [CAD Files](Code/rockfull_with_airetLED_external.ino)
+
+- [Formlabs Files](Code/rockfull_with_airetLED_external.ino)
 
 Please provide the following overview and self-assessment 
 Main design files: link to repository with design files and assembly instructions 
