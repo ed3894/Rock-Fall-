@@ -3,9 +3,9 @@
 Embedded Rockfall Detection System Using TinyML with Real-Time, 3-Component Accelerometer and Gyroscope Data 
 
 ## Authors
-1. Ahmed, Ahmed 
-2. Deal, Ethan 
-3. Ding, Yidan 
+- **Ahmed, Ahmed**
+- **Deal, Ethan**
+- **Ding, Yidan**
 
 ## Abstract
 
@@ -45,10 +45,10 @@ Hardware Components:
 *Figure x: Arduino 33 BLE Sense Board*
 
 Software Components:
-•	Data Collection: Utilizing Arduino libraries to interface with IMU sensors
-•	Model Training: Data collected is used to train machine learning models on platforms like Edge Impulse
-•	Model Deployment: Trained models are converted to TensorFlow Lite format and deployed on the microcontroller
-•	Real-Time Inference: The microcontroller processes incoming sensor data to detect rockfall events
+- **Data Collection**: Utilizing Arduino libraries to interface with IMU sensors
+- **Model Training**: Data collected is used to train machine learning models on platforms like Edge Impulse
+- **Model Deployment**: Trained models are converted to TensorFlow Lite format and deployed on the microcontroller
+- **Real-Time Inference**: The microcontroller processes incoming sensor data to detect rockfall events
 
 # 2. Quality Control
 ## Safety
