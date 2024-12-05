@@ -1,6 +1,5 @@
 # 1. Overview
-## Title
-Embedded Rockfall Detection System Using TinyML with Real-Time, 3-Component Accelerometer and Gyroscope Data 
+## Embedded Rockfall Detection System Using TinyML with Real-Time, 3-Component Accelerometer and Gyroscope Data 
 
 ## Authors
 **Ahmed, Ahmed**
