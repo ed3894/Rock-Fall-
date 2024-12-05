@@ -31,6 +31,9 @@ Recent advancements in machine learning, particularly the use of Tiny Machine Le
 ## Overall Implementation and Design
 The proposed rockfall detection system utilizes the Arduino Nano 33 BLE Sense board, equipped with a 9-axis inertial measurement unit (IMU) comprising a 3D accelerometer, 3D gyroscope, and 3D magnetometer. The IMU captures motion data across three axes, which is processed using TinyML models deployed on the microcontroller. The system is designed to detect specific motion patterns indicative of rockfall events.
 
+![Alt Text](images/final_design.jpg)
+*Figure 1: Formlabs 3+ Printer used for the project.*
+
 Hardware Components:
 •	Microcontroller: Arduino Nano 33 BLE Sense
 •	Sensors: Onboard 9-axis IMU (accelerometer, gyroscope, magnetometer)
@@ -57,13 +60,16 @@ Again: Detailed instructions belong in documentation; here, provide a summary  i
 
 # 3. Application
 ## Use Cases
+
+ADD A LINK TO THE EDGE IMPULSE AND TALK ABOUT DATA COLLECTION. FOCUS MAINLY ON OUR EXPERIMENTAL DATA WE COLLECTED, RATHER THAN FIELD DATA. 
+
 Describe at least one example of an application of your hardware. This should include some evidence of output, e.g. data produced by the use of the device or a picture of other types of results. Outline how the quality control in the previous section enables the use of the hardware in this context. We encourage the inclusion of experiment results or the reference to a publication (published or to be published) where these results are detailed. We also encourage pointers to ongoing work. 
 
 Note: In the spirit of openness, we require authors to provide (or link to) datasets along with the submitted graphic representations. We do not impose arbitrary limits on the inclusion of data so please include sufficient empirical detail and results to ensure your data can be easily verified, analysed and clearly interpreted by the wider scientific community. 
 
 # 4. Build Details
 ## Availability of Materials and Methods
-
+While the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) are widely available through global distributors, the use of a Formlabs 3+ printer with proprietary  [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/) provides a specialized solution for creating high-quality enclosures. These materials and methods are suitable for replicable construction but may require access to advanced 3D printing facilities. The use of only accelerometer and gyroscope data focuses the hardware's functionality on motion-related metrics, aligning with the project’s specific objectives.
 
 ## Ease of Build / Design Decision 
 The system is designed for ease of assembly, utilizing off-the-shelf components and open-source software tools. Design decisions focus on minimizing cost and power consumption while ensuring reliable detection capabilities. 
@@ -79,12 +85,11 @@ The system relies on the Arduino development environment and libraries for senso
 The hardware for this project was constructed using an [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board integrated with the [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi), tailored for embedded machine learning applications. The [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)  built-in accelerometer and gyroscope were utilized to capture motion and vibration data, which are essential for detecting rockfall events. A custom enclosure was designed and produced using a [Formlabs 3+](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOoogctzvkMCPNXJxEQaeboXhmlPcaZkhTJMcOLzRIGzMOPJLnxxH) printer with [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/), providing a durable and precise housing for the components. This resin is ideal for high-resolution, rapid prototyping applications, ensuring the enclosure meets the project's requirements for robustness and accuracy.
 
 ![Alt Text](images/final_design.jpg)
-
 *Figure 1: Formlabs 3+ Printer used for the project.*
 
 The assembly involved securely mounting the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) within the 3D-printed enclosure using standard screws. The electrical connections between components were established through pre-soldered headers, simplifying the process while ensuring a reliable setup. The enclosure was specifically designed using CAD software to ensure a precise fit for the hardware, accommodating the dynamic testing conditions of the project.
 
-While the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) are widely available through global distributors, the use of a Formlabs 3+ printer with proprietary  [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/) provides a specialized solution for creating high-quality enclosures. These materials and methods are suitable for replicable construction but may require access to advanced 3D printing facilities. The use of only accelerometer and gyroscope data focuses the hardware's functionality on motion-related metrics, aligning with the project’s specific objectives.
+
 
 Name: The name of the archive 
 Persistent identifier: e.g. DOI, etc. 
