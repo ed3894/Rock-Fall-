@@ -8,7 +8,7 @@
 
 ## Abstract
 
-This project presents a cost-effective embedded system for real-time rockfall detection using TinyML on an Arduino Nano 33 BLE board with an integrated TinyML Shield. The system employs a 3-axis accelerometer and gyroscope to capture motion data, processed using neural networks trained via Edge Impulse. A 3D-printed enclosure was designed for housing the components, emphasizing ease of assembly with off-the-shelf parts. The dataset comprises 100 rockfall events and 200 background noise events, sampled at 100 Hz, with features extracted using FFT preprocessing. The system achieved 85% accuracy during testing and includes a flashing LED indicator for rockfall detection. While the current design is not water-tight, a thin plastic bag was used for protection during testing. Future iterations aim to enhance durability and deployability in high-risk areas, incorporating renewable power sources and real-time alert systems. This project demonstrates a scalable and efficient approach to monitoring geological hazards.
+This project presents a cost-effective embedded system for real-time rockfall detection using TinyML on an Arduino Nano 33 BLE board with an integrated TinyML Shield. The system employs a 3-axis accelerometer and gyroscope to capture motion data, processed using neural networks trained via Edge Impulse. A 3D-printed enclosure was designed for housing the components, emphasizing ease of assembly with off-the-shelf parts. The dataset comprises 100 rockfall events and 231 background noise events, sampled at 100 Hz, with features extracted using FFT preprocessing. The system achieved 85% accuracy during testing and includes a flashing LED indicator for rockfall detection. While the current design is not water-tight, a thin plastic bag was used for protection during testing. Future iterations aim to enhance durability and deployability in high-risk areas, incorporating renewable power sources and real-time alert systems. This project demonstrates a scalable and efficient approach to monitoring geological hazards.
 
 ## Metadata Overview
 
@@ -102,7 +102,7 @@ The goal is to detect rockfall events in real-time using a lightweight embedded 
 Raw accelerometer and gyroscope data are transformed into spectral features using **FFT (Fast Fourier Transform)** preprocessing. The FFT parameters included a window size of 1500 ms with a stride of 5 ms, and a sampling frequency of 100 Hz. Data from all axes of the accelerometer (accX, accY, accZ) and gyroscope (gyrX, gyrY, gyrZ) were utilized. The neural network consisted of two dense layers with 20 and 10 neurons, respectively, using ReLU as the activation function. The output layer contained 3 neurons corresponding to the classes "Noise," "Rockfall," and "Roomnoise," with a softmax activation for probability predictions. The model was trained with a learning rate of 0.0005 for 30 epochs, leveraging all axes to enhance classification accuracy.
 
 ### Data Splitting
-The dataset is split into **80% training data** and **20% testing data**.
+The dataset is split into **82% training data** and **18% testing data**.
 
 ### Training Output
 The model achieved an accuracy of 84.6% and a loss of 0.41 on the validation set. The confusion matrix shows "Noise" was classified with 87.5% accuracy, "Rockfall" with 92.9%, and "Roomnoise" with 77.3%. The F1 scores for "Noise," "Rockfall," and "Roomnoise" are 0.88, 0.84, and 0.83.
