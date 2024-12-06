@@ -118,8 +118,9 @@ While the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-na
 The system is designed for ease of assembly, utilizing off-the-shelf components and open-source software tools. Design decisions focus on minimizing cost and power consumption while ensuring reliable detection capabilities. 
 
 ## Operating Software and Peripherals
-If hardware requires software, details on the operating software and programming language - Please include minimum version compatibility. Additional system requirements, e.g. memory, disk space, processor, input or output devices. 
-If the hardware does not require software, detail any required supporting processes or protocols required for use.  
+ We used Arduino IDE version 2.2.3 to program the Arduino Nano 33 BLE board. Adding external libraries to the Arduino IDE is straightforward—users can simply navigate to Sketch > Include Library > Add .ZIP Library, select the desired ZIP file, and the library will be installed and ready to use.
+
+Additionally, we leveraged Edge Impulse, a free browser-based software, for dataset creation, preprocessing, model training, and deployment. Its user-friendly interface simplifies TinyML development and eliminates the need for additional software installations, making it an accessible choice for this project.
 
 [Adding Zip Libraries](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
 [Arduino IDE](https://www.arduino.cc/en/software)
