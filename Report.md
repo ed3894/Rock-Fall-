@@ -75,6 +75,35 @@ The final hardware design measures 4x2.5x1.125 inches, housing an Arduino Nano 3
 A link to the Edge Impulse project that includes the collected data and processing, and training the neural network. 
 https://studio.edgeimpulse.com/public/575131/live
 
+## Data Collection Process
+
+### Objective
+The goal is to detect rockfall events in real-time using a lightweight embedded system with a three-axis accelerometer and gyroscope.
+
+### Hardware Setup
+- **Arduino Nano 33 BLE**: Equipped with TinyML capabilities.
+- **Three-axis accelerometer and gyroscope**: Used to record vibrations.
+- **Experimental Setup**: A soil-filled bin inclined at 45° to simulate rockfalls.
+
+### Data Acquisition
+- **Events Recorded**:
+  - **Rockfall Events**: Simulated by dropping rocks into the soil-filled bin.
+  - **Background Noise Events**: Captured during periods without any rockfall activity.
+- **Sampling Rate**: Data is sampled at 100 Hz.
+- **Duration**: Each event is recorded for 1.5 seconds.
+- **Dataset Size**:
+  - 100 rockfall events.
+  - 150 background noise events.
+
+### Preprocessing
+Raw accelerometer and gyroscope data are transformed into spectral features using **FFT (Fast Fourier Transform)** preprocessing.
+
+### Data Splitting
+The dataset is split into **80% training data** and **20% testing data**.
+
+### Deployment
+After training the neural network, the model is deployed to the Arduino board housed in a custom 3D-printed enclosure.
+
 ![Alt Text](Images/setup.jpg)
 *Figure x: Experimental Setup*
 
