@@ -133,12 +133,9 @@ The system is designed for ease of assembly, utilizing off-the-shelf components 
 
 
 ## Operating Software and Peripherals
- We used Arduino IDE version 2.2.3 to program the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2). Adding external libraries to the Arduino IDE is straightforward—users can simply navigate to Sketch > Include Library > Add .ZIP Library, select the desired ZIP file, and the library will be installed and ready to use.
+ We used [Arduino IDE](https://www.arduino.cc/en/software) version 2.2.3 to program the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2). [Adding external libraries](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/) to the Arduino IDE is straightforward—users can simply navigate to Sketch > Include Library > Add .ZIP Library, select the desired ZIP file, and the library will be installed and ready to use.
 
 Additionally, we leveraged [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live), a free browser-based software, for dataset creation, preprocessing, model training, and deployment. Its user-friendly interface simplifies TinyML development and eliminates the need for additional software installations, making it an accessible choice for this project.
-
-[Adding Zip Libraries](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
-[Arduino IDE](https://www.arduino.cc/en/software)
 
 ## Dependencies
 The system relies on the Arduino development environment and libraries for sensor interfacing, as well as machine learning frameworks like TensorFlow Lite for model deployment. All dependencies are open-source and compatible with the hardware components used.
