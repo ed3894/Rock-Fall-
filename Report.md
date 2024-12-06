@@ -75,7 +75,7 @@ The final hardware design measures 4x2.5x1.125 inches, housing an Arduino Nano 3
 A link to the Edge Impulse project that includes the collected data and processing, and training the neural network. 
 https://studio.edgeimpulse.com/public/575131/live
 
-## Data Collection Process
+### Data Collection Process
 
 ### Objective
 The goal is to detect rockfall events in real-time using a lightweight embedded system with a three-axis accelerometer and gyroscope.
