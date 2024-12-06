@@ -93,13 +93,19 @@ The goal is to detect rockfall events in real-time using a lightweight embedded 
 - **Duration**: Each event is recorded for 1.5 seconds.
 - **Dataset Size**:
   - 100 rockfall events.
-  - 200 background noise events.
+  - 231 background noise events.
 
 ### Preprocessing
-Raw accelerometer and gyroscope data are transformed into spectral features using **FFT (Fast Fourier Transform)** preprocessing.
+Raw accelerometer and gyroscope data are transformed into spectral features using **FFT (Fast Fourier Transform)** preprocessing. The FFT parameters included a window size of 1500 ms with a stride of 5 ms, and a sampling frequency of 100 Hz. Data from all axes of the accelerometer (accX, accY, accZ) and gyroscope (gyrX, gyrY, gyrZ) were utilized. The neural network consisted of two dense layers with 20 and 10 neurons, respectively, using ReLU as the activation function. The output layer contained 3 neurons corresponding to the classes "Noise," "Rockfall," and "Roomnoise," with a softmax activation for probability predictions. The model was trained with a learning rate of 0.0005 for 30 epochs, leveraging all axes to enhance classification accuracy.
 
 ### Data Splitting
 The dataset is split into **80% training data** and **20% testing data**.
+
+### Training Output
+The model achieved an accuracy of 84.6% and a loss of 0.41 on the validation set. The confusion matrix shows "Noise" was classified with 87.5% accuracy, "Rockfall" with 92.9%, and "Roomnoise" with 77.3%. The F1 scores for "Noise," "Rockfall," and "Roomnoise" are 0.88, 0.84, and 0.83.
+
+### Model Testing
+On the test data, the model achieved an accuracy of 86%. The confusion matrix shows that "Noise" was classified with 100% accuracy, "Rockfall" with 75% accuracy, and "Roomnoise" with 90% accuracy. The F1 scores are 0.91, 0.86, and 0.95 for "Noise," "Rockfall," and "Roomnoise,".
 
 ### Deployment
 After training the neural network, the model is deployed to the Arduino board housed in a custom 3D-printed enclosure.
