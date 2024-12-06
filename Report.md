@@ -93,7 +93,7 @@ The goal is to detect rockfall events in real-time using a lightweight embedded 
 - **Duration**: Each event is recorded for 1.5 seconds.
 - **Dataset Size**:
   - 100 rockfall events.
-  - 150 background noise events.
+  - 200 background noise events.
 
 ### Preprocessing
 Raw accelerometer and gyroscope data are transformed into spectral features using **FFT (Fast Fourier Transform)** preprocessing.
@@ -106,10 +106,6 @@ After training the neural network, the model is deployed to the Arduino board ho
 
 ![Alt Text](Images/setup.jpg)
 *Figure x: Experimental Setup*
-
-Describe at least one example of an application of your hardware. This should include some evidence of output, e.g. data produced by the use of the device or a picture of other types of results. Outline how the quality control in the previous section enables the use of the hardware in this context. We encourage the inclusion of experiment results or the reference to a publication (published or to be published) where these results are detailed. We also encourage pointers to ongoing work. 
-
-Note: In the spirit of openness, we require authors to provide (or link to) datasets along with the submitted graphic representations. We do not impose arbitrary limits on the inclusion of data so please include sufficient empirical detail and results to ensure your data can be easily verified, analysed and clearly interpreted by the wider scientific community. 
 
 # 4. Build Details
 ## Availability of Materials and Methods
