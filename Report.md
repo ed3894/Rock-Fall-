@@ -121,6 +121,9 @@ The system is designed for ease of assembly, utilizing off-the-shelf components 
 If hardware requires software, details on the operating software and programming language - Please include minimum version compatibility. Additional system requirements, e.g. memory, disk space, processor, input or output devices. 
 If the hardware does not require software, detail any required supporting processes or protocols required for use.  
 
+[Adding Zip Libraries](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
+[Arduino IDE](https://www.arduino.cc/en/software)
+
 ## Dependencies
 The system relies on the Arduino development environment and libraries for sensor interfacing, as well as machine learning frameworks like TensorFlow Lite for model deployment. All dependencies are open-source and compatible with the hardware components used.
 
@@ -145,14 +148,17 @@ To assemble the hardware:
 
 # 5. Discussion
 ## Conclusions
-The embedded rockfall detection system demonstrates the feasibility of using TinyML for real-time monitoring of geological hazards. Its cost-effectiveness and scalability make it a viable solution for deployment in various high-risk areas.
+The embedded rockfall detection system demonstrates the feasibility of using TinyML for real-time monitoring of geological hazards, providing timely alerts to enhance safety measures. Its cost-effectiveness and scalability make it a viable solution for deployment in various high-risk areas, such as mountainous regions and infrastructure corridors. By utilizing low-power embedded devices and efficient machine learning models, the system minimizes operational costs while maintaining reliable detection capabilities. This approach opens new possibilities for widespread implementation in resource-constrained settings, offering a practical alternative to traditional monitoring methods.
 
 ## Future Work
-Future developments include testing the system with different materials and variables in the lab, determining the optimal number of sensors required over a given area, and conducting extensive field applications to demonstrate the method's effectiveness. Implementations in high-risk zones, for example along the I-70 corridor, incorporating solar panels and road signs with flashing lights for real-time alerts.
+Future work on this project could involve exploring a wider range of sensors and hardware configurations. In this study, we used a single type of accelerometer and gyroscope integrated with the Arduino Nano 33 BLE board. Future iterations may benefit from testing more advanced TINYML boards and alternative sensor types to evaluate performance improvements. Additionally, our experiments were conducted with a single soil type, but testing across diverse soils and materials would provide a more comprehensive understanding of the system’s adaptability. A critical question is whether the system can scale to larger rockfalls and how the size and intensity of these events impact detection accuracy.
+
+Another important avenue for research involves determining the number of sensors required to monitor a given area effectively and assessing the distance at which sensors become ineffective. Understanding the degree to which the system's performance is site-dependent will also be crucial. Collecting significantly more data for training and testing will enhance model reliability and validate these methods for broader applications. Finally, implementing this system in a real-world context, such as a highway corridor prone to rockfalls, will require future research on enclosure designs, long-term power supply solutions, and developing an effective warning system for drivers and authorities. These steps are essential for refining and scaling this technology to meet practical safety requirements.
 
 ## Author Contributions
-Task (e.g. design, assembly, use cases contribution, documentation, paper writing), contribution, author name. 
-
+- **Ahmed, Ahmed**:
+- **Deal, Ethan**: 
+- **Ding, Yidan**:
 
 ## References
 [1] Dietze M, Mohadjer S, Turowski JM, Ehlers TA, Hovius N. Seismic monitoring of small alpine rockfalls – validity, precision and limitations. Earth Surf. Dynam. 2017;5:653-668. Available from: https://www.earth-surf-dynam.net/5/653/2017/.
