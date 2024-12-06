@@ -72,7 +72,8 @@ The final hardware design measures 4x2.5x1.125 inches, housing an Arduino Nano 3
 # 3. Application
 ## Use Cases
 
-ADD A LINK TO THE EDGE IMPULSE AND TALK ABOUT DATA COLLECTION. 
+A link to the EDGE IMPLSE project that includes the collected data, processing, traing the neural network. 
+https://studio.edgeimpulse.com/public/575131/live
 
 ![Alt Text](Images/setup.jpg)
 *Figure x: Experimental Setup*
