@@ -173,9 +173,9 @@ Future work on this project could involve exploring a wider range of sensors and
 Another important avenue for research involves determining the number of sensors required to monitor a given area effectively and assessing the distance at which sensors become ineffective. Understanding the degree to which the system's performance is site-dependent will also be crucial. Collecting significantly more data for training and testing will enhance model reliability and validate these methods for broader applications. Finally, implementing this system in a real-world context, such as a highway corridor prone to rockfalls, will require future research on enclosure designs, long-term power supply solutions, and developing an effective warning system for drivers and authorities. These steps are essential for refining and scaling this technology to meet practical safety requirements.
 
 ## Author Contributions
-- **Ahmed, Ahmed**:
-- **Deal, Ethan**: 
-- **Ding, Yidan**:
+- **Ahmed, Ahmed**: Data collection, 3D printing, Arduino Code.
+- **Deal, Ethan**: Data collection, 3D printing, Edge Impulse.
+- **Ding, Yidan**: Data collection, Edge Impulse, Arduino Code.
 
 ## References
 [1] Dietze M, Mohadjer S, Turowski JM, Ehlers TA, Hovius N. Seismic monitoring of small alpine rockfalls – validity, precision and limitations. Earth Surf. Dynam. 2017;5:653-668. Available from: https://www.earth-surf-dynam.net/5/653/2017/.
