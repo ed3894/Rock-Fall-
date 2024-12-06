@@ -68,7 +68,6 @@ The reliability of measurements in this hardware setup depends on proper couplin
 ## General Testing
 The final hardware design measures 4x2.5x1.125 inches, housing an [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) that is compact at only 2x0.5x0.5 inches. While the enclosure is functional, it is not inherently water-tight unless the openings in the 3D-printed case are sealed. To protect the design during testing, a thin plastic bag was placed around the entire assembly before burial, preventing moisture and dirt contamination. For real-world applications, this design would need to be upgraded with a fully sealed and water-tight enclosure to ensure durability in harsh conditions. Additionally, the current enclosure may be vulnerable to damage from larger rocks, which could crush critical components. To address this, a sturdier container would be required in practical implementations to withstand high-impact forces and maintain the integrity of the hardware.
 
-
 # 3. Application
 ## Use Cases
 
@@ -88,6 +87,10 @@ The goal is to detect rockfall events in real-time using a lightweight embedded 
 - **Events Recorded**:
   - **Rockfall Events**: Simulated by dropping rocks into the soil-filled bin. (25 with 1 rock, 25 with 2 rocks, 25 with 3 rocks, and 25 with 4 rocks)
   - **Background Noise Events**: Captured during periods without any rockfall activity.
+    
+![Alt Text](Images/setup.jpg)
+*Figure x: Experimental Setup*
+
 - **Sampling Rate**: Data is sampled at 100 Hz.
 - **Duration**: Each event is recorded for 1.5 seconds.
 - **Dataset Size**:
@@ -117,9 +120,6 @@ On the test data, the model achieved an accuracy of 86%. The confusion matrix sh
 
 ### Deployment
 After training the neural network, the model is deployed to the Arduino board housed in a custom 3D-printed enclosure.
-
-![Alt Text](Images/setup.jpg)
-*Figure x: Experimental Setup*
 
 # 4. Build Details
 ## Availability of Materials and Methods
