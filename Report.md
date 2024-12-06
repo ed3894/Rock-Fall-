@@ -24,7 +24,7 @@ This project is suitable for individuals with intermediate to advanced technical
 **Skills Required**:
 - **3D Printing**: *Easy* – The enclosure can be printed using a desktop 3D printer (e.g., [Formlabs 3+](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOopdqPI10g0-ZyGyA96_Trz8X_d3jwf-fEDesUWGnlU1FA91aLRP) with [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/)) with minimal setup and post-processing required.
 - **Arduino Code Implementation**: *Easy* – Running pre-written code on the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) is straightforward for anyone familiar with Arduino IDE.
-- **Data Collection and Processing**: *Advanced* – Requires specialized knowledge in digital signal processing and machine learning, particularly in working with neural networks and using platforms like [[Edge Impulse](https://studio.edgeimpulse.com/public/575131/live)](https://studio.edgeimpulse.com/public/575131/live) to train and deploy models.
+- **Data Collection and Processing**: *Advanced* – Requires specialized knowledge in digital signal processing and machine learning, particularly in working with neural networks and using platforms like [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live) to train and deploy models.
 - **Hardware Assembly**: *Easy* – Involves simple assembly steps such as securing components in a 3D-printed enclosure and connecting sensors with pre-soldered headers.
 
 ## Keywords
@@ -54,7 +54,7 @@ Hardware Components:
 
 Software Components:
 - **Data Collection**: Utilizing Arduino libraries to interface with IMU sensors
-- **Model Training**: Data collected is used to train machine learning models on platforms like [[Edge Impulse](https://studio.edgeimpulse.com/public/575131/live)](https://studio.edgeimpulse.com/public/575131/live)
+- **Model Training**: Data collected is used to train machine learning models on platforms like [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live)
 - **Model Deployment**: Trained models are converted to TensorFlow Lite format and deployed on the microcontroller
 - **Real-Time Inference**: The microcontroller processes incoming sensor data to detect rockfall events
 
@@ -63,7 +63,7 @@ Software Components:
 This project poses no significant safety risks. The [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board operates at a maximum voltage of 3 V. The only potential concern is the scale of the simulated rockfalls. However, our rockfall experiments were conducted on a very small scale, mitigating this risk.
 
 ## Calibration
-The reliability of measurements in this hardware setup depends on proper coupling between the [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) and the soil. To ensure accurate wave transmission from rockfalls to the accelerometer and gyroscope, the shield must be buried securely, with the soil packed firmly around it. Adding a small amount of water can further enhance soil compaction and improve signal transmission. Users are advised to test different burial depths, shield locations, soil packing methods, and moisture levels to optimize data quality before beginning actual data collection. [[Edge Impulse](https://studio.edgeimpulse.com/public/575131/live)](https://studio.edgeimpulse.com/public/575131/live) enables rapid data visualization, allowing users to evaluate these adjustments efficiently.
+The reliability of measurements in this hardware setup depends on proper coupling between the [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) and the soil. To ensure accurate wave transmission from rockfalls to the accelerometer and gyroscope, the shield must be buried securely, with the soil packed firmly around it. Adding a small amount of water can further enhance soil compaction and improve signal transmission. Users are advised to test different burial depths, shield locations, soil packing methods, and moisture levels to optimize data quality before beginning actual data collection. [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live) enables rapid data visualization, allowing users to evaluate these adjustments efficiently.
 
 ## General Testing
 The final hardware design measures 4x2.5x1.125 inches, housing an [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) that is compact at only 2x0.5x0.5 inches. While the enclosure is functional, it is not inherently water-tight unless the openings in the 3D-printed case are sealed. To protect the design during testing, a thin plastic bag was placed around the entire assembly before burial, preventing moisture and dirt contamination. For real-world applications, this design would need to be upgraded with a fully sealed and water-tight enclosure to ensure durability in harsh conditions. Additionally, the current enclosure may be vulnerable to damage from larger rocks, which could crush critical components. To address this, a sturdier container would be required in practical implementations to withstand high-impact forces and maintain the integrity of the hardware.
@@ -72,7 +72,7 @@ The final hardware design measures 4x2.5x1.125 inches, housing an [Arduino Nano 
 # 3. Application
 ## Use Cases
 
-A link to the [[Edge Impulse](https://studio.edgeimpulse.com/public/575131/live)](https://studio.edgeimpulse.com/public/575131/live) project that includes the collected data and processing, and training the neural network. 
+A link to the [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live) project that includes the collected data and processing, and training the neural network. 
 
 ### Data Collection Process
 
