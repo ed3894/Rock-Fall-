@@ -86,7 +86,7 @@ The goal is to detect rockfall events in real-time using a lightweight embedded 
 
 ### Data Acquisition
 - **Events Recorded**:
-  - **Rockfall Events**: Simulated by dropping rocks into the soil-filled bin.
+  - **Rockfall Events**: Simulated by dropping rocks into the soil-filled bin. (25 with 1 rock, 25 with 2 rocks, 25 with 3 rocks, and 25 with 4 rocks)
   - **Background Noise Events**: Captured during periods without any rockfall activity.
 - **Sampling Rate**: Data is sampled at 100 Hz.
 - **Duration**: Each event is recorded for 1.5 seconds.
