@@ -99,7 +99,7 @@ The goal is to detect rockfall events in real-time using a lightweight embedded 
 *Figure 4: A Sample of Rockfall Data*
 
 ### Preprocessing
-Raw accelerometer and gyroscope data are transformed into spectral features using **FFT (Fast Fourier Transform)** preprocessing. The FFT parameters included a window size of 1500 ms with a stride of 5 ms, and a sampling frequency of 100 Hz. Data from all axes of the accelerometer (accX, accY, accZ) and gyroscope (gyrX, gyrY, gyrZ) were utilized. The neural network consisted of two dense layers with 20 and 10 neurons, respectively, using ReLU as the activation function. The output layer contained 3 neurons corresponding to the classes "Noise," "Rockfall," and "Roomnoise," with a softmax activation for probability predictions. The model was trained with a learning rate of 0.0005 for 30 epochs, leveraging all axes to enhance classification accuracy.
+Raw accelerometer and gyroscope data are transformed into spectral features using FFT (Fast Fourier Transform) preprocessing. The FFT parameters included a window size of 1500 ms with a stride of 5 ms, and a sampling frequency of 100 Hz. Data from all axes of the accelerometer (accX, accY, accZ) and gyroscope (gyrX, gyrY, gyrZ) were utilized. The neural network consisted of two dense layers with 20 and 10 neurons, respectively, using ReLU as the activation function. The output layer contained 3 neurons corresponding to the classes "Noise," "Rockfall," and "Roomnoise," with a softmax activation for probability predictions. The model was trained with a learning rate of 0.0005 for 30 epochs, leveraging all axes to enhance classification accuracy.
 
 ### Data Splitting
 The dataset is split into **82% training data** and **18% testing data**.
