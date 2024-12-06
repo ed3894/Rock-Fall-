@@ -8,7 +8,7 @@
 
 ## Abstract
 
-This project presents a cost-effective embedded system for real-time rockfall detection using TinyML on an Arduino Nano 33 BLE board with an integrated TinyML Shield. The system employs a 3-axis accelerometer and gyroscope to capture motion data, processed using neural networks trained via Edge Impulse. A 3D-printed enclosure was designed for housing the components, emphasizing ease of assembly with off-the-shelf parts. The dataset comprises 100 rockfall events and 231 background noise events, sampled at 100 Hz, with features extracted using FFT preprocessing. The system achieved 85% accuracy during testing and includes a flashing LED indicator for rockfall detection. While the current design is not water-tight, a thin plastic bag was used for protection during testing. Future iterations aim to enhance durability and deployability in high-risk areas, incorporating renewable power sources and real-time alert systems. This project demonstrates a scalable and efficient approach to monitoring geological hazards.
+This project presents a cost-effective embedded system for real-time rockfall detection using TinyML on an [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) with an integrated TinyML Shield. The system employs a 3-axis accelerometer and gyroscope to capture motion data, processed using neural networks trained via Edge Impulse. A 3D-printed enclosure was designed for housing the components, emphasizing ease of assembly with off-the-shelf parts. The dataset comprises 100 rockfall events and 231 background noise events, sampled at 100 Hz, with features extracted using FFT preprocessing. The system achieved 86% accuracy during testing and includes a flashing LED indicator for rockfall detection. While the current design is not water-tight, a thin plastic bag was used for protection during testing. Future iterations aim to enhance durability and deployability in high-risk areas, incorporating renewable power sources and real-time alert systems. This project demonstrates a scalable and efficient approach to monitoring geological hazards.
 
 ## Metadata Overview
 
@@ -23,7 +23,7 @@ This project is suitable for individuals with intermediate to advanced technical
 
 **Skills Required**:
 - **3D Printing**: *Easy* – The enclosure can be printed using a desktop 3D printer (e.g., Formlabs 3+ with Draft V2 photopolymer resin) with minimal setup and post-processing required.
-- **Arduino Code Implementation**: *Easy* – Running pre-written code on the Arduino Nano 33 BLE is straightforward for anyone familiar with Arduino IDE.
+- **Arduino Code Implementation**: *Easy* – Running pre-written code on the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) is straightforward for anyone familiar with Arduino IDE.
 - **Data Collection and Processing**: *Advanced* – Requires specialized knowledge in digital signal processing and machine learning, particularly in working with neural networks and using platforms like Edge Impulse to train and deploy models.
 - **Hardware Assembly**: *Easy* – Involves simple assembly steps such as securing components in a 3D-printed enclosure and connecting sensors with pre-soldered headers.
 
@@ -37,20 +37,20 @@ Recent advancements in machine learning, particularly the use of Tiny Machine Le
 
 
 ## Overall Implementation and Design
-The proposed rockfall detection system utilizes the Arduino Nano 33 BLE Sense board, equipped with a 9-axis inertial measurement unit (IMU) comprising a 3D accelerometer, 3D gyroscope, and 3D magnetometer. The IMU captures motion data across three axes, which is processed using TinyML models deployed on the microcontroller. The system is designed to detect specific motion patterns indicative of rockfall events.
+The proposed rockfall detection system utilizes the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board, equipped with a 9-axis inertial measurement unit (IMU) comprising a 3D accelerometer, 3D gyroscope, and 3D magnetometer. The IMU captures motion data across three axes, which is processed using TinyML models deployed on the microcontroller. The system is designed to detect specific motion patterns indicative of rockfall events.
 
 ![Alt Text](Images/finaldesign.jpg)
 *Figure x: Final Design*
 
 Hardware Components:
-- **Microcontroller**: Arduino Nano 33 BLE Sense
-- **Sensors**: Onboard 9-axis IMU (accelerometer, gyroscope, magnetometer)
+- **Microcontroller**: [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)
+- **Sensors**: Onboard 9-axis IMU (accelerometer, gyroscope, magnetometer) (magnetometer data not used for this project)
 - **Power Supply**: Rechargeable battery pack
 - **Communication Module**: Bluetooth Low Energy (BLE) for data transmission
 
 
 ![Alt Text](Images/arduino.jpg)
-*Figure x: Arduino 33 BLE Sense Board*
+*Figure x: [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)*
 
 Software Components:
 - **Data Collection**: Utilizing Arduino libraries to interface with IMU sensors
@@ -60,13 +60,13 @@ Software Components:
 
 # 2. Quality Control
 ## Safety
-This project poses no significant safety risks. The [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board operates at a maximum voltage of 3 V. The only potential concern is the scale of the simulated rockfalls. However, our rockfall experiments were conducted on a very small scale, mitigating this risk.
+This project poses no significant safety risks. The [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board operates at a maximum voltage of 3 V. The only potential concern is the scale of the simulated rockfalls. However, our rockfall experiments were conducted on a very small scale, mitigating this risk.
 
 ## Calibration
 The reliability of measurements in this hardware setup depends on proper coupling between the TinyML Shield and the soil. To ensure accurate wave transmission from rockfalls to the accelerometer and gyroscope, the shield must be buried securely, with the soil packed firmly around it. Adding a small amount of water can further enhance soil compaction and improve signal transmission. Users are advised to test different burial depths, shield locations, soil packing methods, and moisture levels to optimize data quality before beginning actual data collection. Edge Impulse enables rapid data visualization, allowing users to evaluate these adjustments efficiently.
 
 ## General Testing
-The final hardware design measures 4x2.5x1.125 inches, housing an Arduino Nano 33 BLE board that is compact at only 2x0.5x0.5 inches. While the enclosure is functional, it is not inherently water-tight unless the openings in the 3D-printed case are sealed. To protect the design during testing, a thin plastic bag was placed around the entire assembly before burial, preventing moisture and dirt contamination. For real-world applications, this design would need to be upgraded with a fully sealed and water-tight enclosure to ensure durability in harsh conditions. Additionally, the current enclosure may be vulnerable to damage from larger rocks, which could crush critical components. To address this, a sturdier container would be required in practical implementations to withstand high-impact forces and maintain the integrity of the hardware.
+The final hardware design measures 4x2.5x1.125 inches, housing an [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) that is compact at only 2x0.5x0.5 inches. While the enclosure is functional, it is not inherently water-tight unless the openings in the 3D-printed case are sealed. To protect the design during testing, a thin plastic bag was placed around the entire assembly before burial, preventing moisture and dirt contamination. For real-world applications, this design would need to be upgraded with a fully sealed and water-tight enclosure to ensure durability in harsh conditions. Additionally, the current enclosure may be vulnerable to damage from larger rocks, which could crush critical components. To address this, a sturdier container would be required in practical implementations to withstand high-impact forces and maintain the integrity of the hardware.
 
 
 # 3. Application
@@ -81,7 +81,7 @@ https://studio.edgeimpulse.com/public/575131/live
 The goal is to detect rockfall events in real-time using a lightweight embedded system with a three-axis accelerometer and gyroscope.
 
 ### Hardware Setup
-- **Arduino Nano 33 BLE**: Equipped with TinyML capabilities.
+- **[Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)**: Equipped with TinyML capabilities.
 - **Three-axis accelerometer and gyroscope**: Used to record vibrations.
 - **Experimental Setup**: A soil-filled bin inclined at 45° to simulate rockfalls.
 
@@ -124,17 +124,17 @@ After training the neural network, the model is deployed to the Arduino board ho
 
 # 4. Build Details
 ## Availability of Materials and Methods
-While the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) are widely available through global distributors, the use of a Formlabs 3+ printer with proprietary  [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/) provides a specialized solution for creating high-quality enclosures. These materials and methods are suitable for replicable construction but may require access to advanced 3D printing facilities. The use of only accelerometer and gyroscope data focuses the hardware's functionality on motion-related metrics, aligning with the project’s specific objectives.
+While the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) are widely available through global distributors, the use of a Formlabs 3+ printer with proprietary  [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/) provides a specialized solution for creating high-quality enclosures. These materials and methods are suitable for replicable construction but may require access to advanced 3D printing facilities. The use of only accelerometer and gyroscope data focuses the hardware's functionality on motion-related metrics, aligning with the project’s specific objectives.
 
 ![Alt Text](Images/formlabs.jpg)
 *Figure x: Formlabs 3+ Printer used for the project*
 
 ## Ease of Build / Design Decision 
-The system is designed for ease of assembly, utilizing off-the-shelf components and open-source software tools to maximize accessibility. The Arduino Nano 33 BLE is plug-and-play out of the box, requiring minimal technical expertise to get started. Free and widely available software tools, including the Arduino IDE and Edge Impulse, further reduce the complexity and cost of implementation. With a total hardware cost of approximately $20, assuming access to a computer, this project has almost no barriers to entry. Design decisions focused on minimizing cost, reducing power consumption, and ensuring reliable detection capabilities, making this system replicable and approachable for a wide range of users, from students to professionals.
+The system is designed for ease of assembly, utilizing off-the-shelf components and open-source software tools to maximize accessibility. The [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) is plug-and-play out of the box, requiring minimal technical expertise to get started. Free and widely available software tools, including the Arduino IDE and Edge Impulse, further reduce the complexity and cost of implementation. With a total hardware cost of approximately $20, assuming access to a computer, this project has almost no barriers to entry. Design decisions focused on minimizing cost, reducing power consumption, and ensuring reliable detection capabilities, making this system replicable and approachable for a wide range of users, from students to professionals.
 
 
 ## Operating Software and Peripherals
- We used Arduino IDE version 2.2.3 to program the Arduino Nano 33 BLE board. Adding external libraries to the Arduino IDE is straightforward—users can simply navigate to Sketch > Include Library > Add .ZIP Library, select the desired ZIP file, and the library will be installed and ready to use.
+ We used Arduino IDE version 2.2.3 to program the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2). Adding external libraries to the Arduino IDE is straightforward—users can simply navigate to Sketch > Include Library > Add .ZIP Library, select the desired ZIP file, and the library will be installed and ready to use.
 
 Additionally, we leveraged Edge Impulse, a free browser-based software, for dataset creation, preprocessing, model training, and deployment. Its user-friendly interface simplifies TinyML development and eliminates the need for additional software installations, making it an accessible choice for this project.
 
@@ -146,7 +146,7 @@ The system relies on the Arduino development environment and libraries for senso
 
 ## Hardware Documentation / Build Instructions / Files Location
 
-The hardware for this project was constructed using an [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board and a [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi). A custom enclosure was designed using CAD software and 3D printed with a [Formlabs 3+](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOoogctzvkMCPNXJxEQaeboXhmlPcaZkhTJMcOLzRIGzMOPJLnxxH) printer using [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/). This process involved slicing the CAD design for high-resolution rapid prototyping and ensuring the final print provided a precise fit for the components.
+The hardware for this project was constructed using an [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board and a [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi). A custom enclosure was designed using CAD software and 3D printed with a [Formlabs 3+](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOoogctzvkMCPNXJxEQaeboXhmlPcaZkhTJMcOLzRIGzMOPJLnxxH) printer using [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/). This process involved slicing the CAD design for high-resolution rapid prototyping and ensuring the final print provided a precise fit for the components.
 
 ![Alt Text](Images/topprint.jpg)
 *Figure x: 3D Printed Top Piece*
@@ -155,8 +155,8 @@ To assemble the hardware:
 1. **Print the Enclosure**: Use the provided CAD files to 3D print the enclosure. Ensure the dimensions align with the specified 4x2.5x1.125 inches.
 - [CAD Files](CAD_Files)
 - [Formlabs Files](Preform_Design)
-2. **Prepare the Components**: Gather the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board and the [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi).
-3. **Mount the Arduino and Shield**: Secure the TinyML Shield to the Arduino Nano 33 BLE board using pre-soldered headers to establish a reliable electrical connection.
+2. **Prepare the Components**: Gather the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board and the [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi).
+3. **Mount the Arduino and Shield**: Secure the TinyML Shield to the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) using pre-soldered headers to establish a reliable electrical connection.
 4. **Attach Components to the Enclosure**: Place the board and shield assembly into the 3D-printed enclosure and fix it in place using standard screws. Ensure the components are tightly secured to prevent movement during operation.
 5. **Seal the Enclosure (Optional)**: If operating in environments with potential moisture or dust, seal the openings of the enclosure with silicone or another sealing material. For testing, a thin plastic bag was used to protect the hardware from dirt and moisture.
 
