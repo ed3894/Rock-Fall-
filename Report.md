@@ -40,7 +40,7 @@ Recent advancements in machine learning, particularly the use of Tiny Machine Le
 The proposed rockfall detection system utilizes the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board, equipped with a 9-axis inertial measurement unit (IMU) comprising a 3D accelerometer, 3D gyroscope, and 3D magnetometer. The IMU captures motion data across three axes, which is processed using TinyML models deployed on the microcontroller. The system is designed to detect specific motion patterns indicative of rockfall events.
 
 ![Alt Text](Images/finaldesign.jpg)
-*Figure x: Final Design*
+*Figure 1: Final Design*
 
 Hardware Components:
 - **Microcontroller**: [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)
@@ -48,7 +48,7 @@ Hardware Components:
 - **Power Supply**: Cable to computer
 
 ![Alt Text](Images/arduino.jpg)
-*Figure x: [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)*
+*Figure 2: [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)*
 
 Software Components:
 - **Data Collection**: Utilizing Arduino libraries to interface with IMU sensors
@@ -87,7 +87,7 @@ The goal is to detect rockfall events in real-time using a lightweight embedded 
   - **Background Noise Events**: Captured during periods without any rockfall activity.
     
 ![Alt Text](Images/setup.jpg)
-*Figure x: Experimental Setup*
+*Figure 3: Experimental Setup*
 
 - **Sampling Rate**: Data is sampled at 100 Hz.
 - **Duration**: Each event is recorded for 1.5 seconds.
@@ -96,7 +96,7 @@ The goal is to detect rockfall events in real-time using a lightweight embedded 
   - 231 background noise events (125 noise events recorded enivronmental noise and 106 roomnoise events included human activity).
 
 ![Alt Text](Images/Rockfalldata.png)
-*Figure x: A Sample of Rockfall Data*
+*Figure 4: A Sample of Rockfall Data*
 
 ### Preprocessing
 Raw accelerometer and gyroscope data are transformed into spectral features using **FFT (Fast Fourier Transform)** preprocessing. The FFT parameters included a window size of 1500 ms with a stride of 5 ms, and a sampling frequency of 100 Hz. Data from all axes of the accelerometer (accX, accY, accZ) and gyroscope (gyrX, gyrY, gyrZ) were utilized. The neural network consisted of two dense layers with 20 and 10 neurons, respectively, using ReLU as the activation function. The output layer contained 3 neurons corresponding to the classes "Noise," "Rockfall," and "Roomnoise," with a softmax activation for probability predictions. The model was trained with a learning rate of 0.0005 for 30 epochs, leveraging all axes to enhance classification accuracy.
@@ -108,13 +108,13 @@ The dataset is split into **82% training data** and **18% testing data**.
 The model achieved an accuracy of 84.6% and a loss of 0.41 on the validation set. The confusion matrix shows "Noise" was classified with 87.5% accuracy, "Rockfall" with 92.9%, and "Roomnoise" with 77.3%. The F1 scores for "Noise," "Rockfall," and "Roomnoise" are 0.88, 0.84, and 0.83.
 
 ![Alt Text](Images/Confusionmatrix_validationset.png)
-*Figure x: Confusion Matrix for Validation Data*
+*Figure 5: Confusion Matrix for Validation Data*
 
 ### Model Testing
 On the test data, the model achieved an accuracy of 86%. The confusion matrix shows that "Noise" was classified with 100% accuracy, "Rockfall" with 75% accuracy, and "Roomnoise" with 90% accuracy. The F1 scores are 0.91, 0.86, and 0.95 for "Noise," "Rockfall," and "Roomnoise".
 
 ![Alt Text](Images/Confusionmatrix_testdata.png)
-*Figure x: Confusion Matrix for Testing Data*
+*Figure 6: Confusion Matrix for Testing Data*
 
 ### Deployment
 After training the neural network, the model is deployed to the Arduino board housed in a custom 3D-printed enclosure.
@@ -124,7 +124,7 @@ After training the neural network, the model is deployed to the Arduino board ho
 While the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) ($26.30) and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) ($60.00) are widely available through global distributors, the use of a [Formlabs 3+ printer](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOopdqPI10g0-ZyGyA96_Trz8X_d3jwf-fEDesUWGnlU1FA91aLRP) ($2499.00) with proprietary [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/) ($149.00) provides a specialized solution for creating high-quality enclosures. In this project, the 3D printing was by far the most expensive, and lower-cost containers could be used without the shield to get the cost down more.
 
 ![Alt Text](Images/formlabs.jpg)
-*Figure x: [Formlabs 3+ Printer](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOopdqPI10g0-ZyGyA96_Trz8X_d3jwf-fEDesUWGnlU1FA91aLRP) used for the project*
+*Figure 7: [Formlabs 3+ Printer](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOopdqPI10g0-ZyGyA96_Trz8X_d3jwf-fEDesUWGnlU1FA91aLRP) used for the project*
 
 ## Ease of Build / Design Decision 
 The system is designed for ease of assembly, utilizing off-the-shelf components and open-source software tools to maximize accessibility. The [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) is plug-and-play out of the box, requiring minimal technical expertise to get started. Free and widely available software tools, including the Arduino IDE and [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live), further reduce the complexity and cost of implementation. With a total hardware cost of approximately $26, assuming access to a computer, this project has almost no barriers to entry. Design decisions focused on minimizing cost, reducing power consumption, and ensuring reliable detection capabilities, making this system replicable and approachable for a wide range of users, from students to professionals.
@@ -143,7 +143,7 @@ The system relies on the Arduino development environment and libraries for senso
 The hardware for this project was constructed using an [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) board and a [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi). A custom enclosure was designed using CAD software and 3D printed with a [Formlabs 3+](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOoogctzvkMCPNXJxEQaeboXhmlPcaZkhTJMcOLzRIGzMOPJLnxxH) printer using [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/). This process involved slicing the CAD design for high-resolution rapid prototyping and ensuring the final print provided a precise fit for the components.
 
 ![Alt Text](Images/topprint.jpg)
-*Figure x: 3D Printed Top Piece*
+*Figure 8: 3D Printed Top Piece*
 
 To assemble the hardware:
 1. **Print the Enclosure**: Use the provided CAD files to 3D print the enclosure. Ensure the dimensions align with the specified 4x2.5x1.125 inches.
@@ -155,7 +155,7 @@ To assemble the hardware:
 5. **Seal the Enclosure (Optional)**: If operating in environments with potential moisture or dust, seal the openings of the enclosure with silicone or another sealing material. For testing, a thin plastic bag was used to protect the hardware from dirt and moisture.
 
 ![Alt Text](Images/basefinal.jpg)
-*Figure x: [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) Bolted Onto 3D Printed Base*
+*Figure 9: [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) Bolted Onto 3D Printed Base*
 
 # 5. Discussion
 ## Conclusions
@@ -167,9 +167,9 @@ Future work on this project could involve exploring a wider range of sensors and
 Another important avenue for research involves determining the number of sensors required to monitor a given area effectively and assessing the distance at which sensors become ineffective. Understanding the degree to which the system's performance is site-dependent will also be crucial. Collecting significantly more data for training and testing will enhance model reliability and validate these methods for broader applications. Finally, implementing this system in a real-world context, such as a highway corridor prone to rockfalls, will require future research on enclosure designs, long-term power supply solutions, and developing an effective warning system for drivers and authorities. These steps are essential for refining and scaling this technology to meet practical safety requirements.
 
 ## Author Contributions
-- **Ahmed, Ahmed**: Data collection, 3D printing, Arduino Code.
-- **Deal, Ethan**: Data collection, 3D printing, [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live).
-- **Ding, Yidan**: Data collection, [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live), Arduino Code.
+- **Ahmed, Ahmed**: Data collection, 3D printing, Arduino Code, Report Writing.
+- **Deal, Ethan**: Data collection, 3D printing, [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live), Report Writing.
+- **Ding, Yidan**: Data collection, [Edge Impulse](https://studio.edgeimpulse.com/public/575131/live), Report Writing.
 
 ## References
 [1] Dietze M, Mohadjer S, Turowski JM, Ehlers TA, Hovius N. Seismic monitoring of small alpine rockfalls – validity, precision and limitations. Earth Surf. Dynam. 2017;5:653-668. Available from: https://www.earth-surf-dynam.net/5/653/2017/.
