@@ -45,9 +45,7 @@ The proposed rockfall detection system utilizes the [Arduino Nano 33 BLE Board](
 Hardware Components:
 - **Microcontroller**: [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)
 - **Sensors**: Onboard 9-axis IMU (accelerometer, gyroscope, magnetometer) (magnetometer data not used for this project)
-- **Power Supply**: Rechargeable battery pack
-- **Communication Module**: Bluetooth Low Energy (BLE) for data transmission
-
+- **Power Supply**: Cable to computer
 
 ![Alt Text](Images/arduino.jpg)
 *Figure x: [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2)*
@@ -123,7 +121,7 @@ After training the neural network, the model is deployed to the Arduino board ho
 
 # 4. Build Details
 ## Availability of Materials and Methods
-While the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) ($26.30) and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) ($60.00) are widely available through global distributors, the use of a [Formlabs 3+ printer](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOopdqPI10g0-ZyGyA96_Trz8X_d3jwf-fEDesUWGnlU1FA91aLRP) ($2499.00) with proprietary [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/) ($149.00) provides a specialized solution for creating high-quality enclosures. These materials and methods are suitable for replicable construction but may require access to advanced 3D printing facilities. The use of only accelerometer and gyroscope data focuses the hardware's functionality on motion-related metrics, aligning with the project’s specific objectives.
+While the [Arduino Nano 33 BLE Board](https://store-usa.arduino.cc/products/arduino-nano-33-ble?srsltid=AfmBOor4lODWf1WTLHpO6Rsf4GWOvRnjMUOSqRXO_J06y5ka-2iJ5dO2) ($26.30) and [TinyML Shield](https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit?srsltid=AfmBOoojrt-4hQ4G9KjtIXiajwsGtXGNaIXXYTDAT1c_LlG9_NxYmcPi) ($60.00) are widely available through global distributors, the use of a [Formlabs 3+ printer](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOopdqPI10g0-ZyGyA96_Trz8X_d3jwf-fEDesUWGnlU1FA91aLRP) ($2499.00) with proprietary [Draft V2 photopolymer resin](https://formlabs.com/store/materials/draft-v2-resin/) ($149.00) provides a specialized solution for creating high-quality enclosures. In this project, the 3D printing was by far the most expensive, and lower-cost containers could be used without the shield to get the cost down more.
 
 ![Alt Text](Images/formlabs.jpg)
 *Figure x: [Formlabs 3+ Printer](https://formlabs.com/3d-printers/form-3/?srsltid=AfmBOopdqPI10g0-ZyGyA96_Trz8X_d3jwf-fEDesUWGnlU1FA91aLRP) used for the project*
