@@ -115,7 +115,8 @@ While the [Arduino Nano 33 BLE](https://store-usa.arduino.cc/products/arduino-na
 *Figure x: Formlabs 3+ Printer used for the project*
 
 ## Ease of Build / Design Decision 
-The system is designed for ease of assembly, utilizing off-the-shelf components and open-source software tools. Design decisions focus on minimizing cost and power consumption while ensuring reliable detection capabilities. 
+The system is designed for ease of assembly, utilizing off-the-shelf components and open-source software tools to maximize accessibility. The Arduino Nano 33 BLE is plug-and-play out of the box, requiring minimal technical expertise to get started. Free and widely available software tools, including the Arduino IDE and Edge Impulse, further reduce the complexity and cost of implementation. With a total hardware cost of approximately $20, assuming access to a computer, this project has almost no barriers to entry. Design decisions focused on minimizing cost, reducing power consumption, and ensuring reliable detection capabilities, making this system replicable and approachable for a wide range of users, from students to professionals.
+
 
 ## Operating Software and Peripherals
  We used Arduino IDE version 2.2.3 to program the Arduino Nano 33 BLE board. Adding external libraries to the Arduino IDE is straightforward—users can simply navigate to Sketch > Include Library > Add .ZIP Library, select the desired ZIP file, and the library will be installed and ready to use.
